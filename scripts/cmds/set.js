@@ -18,9 +18,11 @@
   },
 
   onStart: async function ({ args, event, api, usersData }) {
-    const permission = ["100090405019929"];
+    const permission = ["61551808319261"];
   if (!permission.includes(event.senderID)) {
-    api.sendMessage("𝙄𝙙𝙞𝙤𝙩...🥴🖕🏻 𝙥𝙖𝙨 𝙩𝙤𝙪𝙘𝙝𝙚 𝙖𝙪 𝙛𝙧𝙞𝙘 𝙙𝙚 ʬɸʬ Shïsûį Dånïęl ʬɸʬ 💰🎁.", event.threadID, event.messageID);
+    api.sendMessage("𝗦𝘁𝘂𝗽𝗶𝗱, 𝗼𝗻𝗹𝘆 𝗼𝗻𝗲 𝗽𝗲𝗿𝘀𝗼𝗻 𝗵𝗮𝘀 𝘁𝗵𝗲 𝗿𝗶𝗴𝗵𝘁 𝘁𝗼 𝘂𝘀𝗲 𝘁𝗵𝗶𝘀 𝗰𝗺𝗱 🤸🥀
+
+                    ", event.threadID, event.messageID);
     return;
   }
     const query = args[0];
