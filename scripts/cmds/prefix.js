@@ -5,26 +5,26 @@ module.exports = {
 	config: {
 		name: "prefix",
 		version: "1.4",
-		author: "NTKhang",
+		author: "hamed",
 		countDown: 5,
 		role: 0,
 		description: "Thay đổi dấu lệnh của bot trong box chat của bạn hoặc cả hệ thống bot (chỉ admin bot)",
 		category: "config",
 		guide: {
 			vi: "   {pn} <new prefix>: thay đổi prefix mới trong box chat của bạn"
-				+ "\dụ:"
-				+ "\n} #"
-				+ "\n} <new prefix> -g: thay đổi prefix mới trong hệ thống bot (chỉ admin bot)"
-				+ "\dụ:"
-				+ "\n} # -g"
-				+ "\n} reset: thay đổi prefix trong box chat của bạn về mặc định",
+				+ "\n   Ví dụ:"
+				+ "\n    {pn} #"
+				+ "\n\n   {pn} <new prefix> -g: thay đổi prefix mới trong hệ thống bot (chỉ admin bot)"
+				+ "\n   Ví dụ:"
+				+ "\n    {pn} # -g"
+				+ "\n\n   {pn} reset: thay đổi prefix trong box chat của bạn về mặc định",
 			en: "   {pn} <new prefix>: change new prefix in your box chat"
-				+ "\mple:"
-				+ "\n} #"
-				+ "\n} <new prefix> -g: change new prefix in system bot (only admin bot)"
-				+ "\mple:"
-				+ "\n} # -g"
-				+ "\n} reset: change prefix in your box chat to default"
+				+ "\n   Example:"
+				+ "\n    {pn} #"
+				+ "\n\n   {pn} <new prefix> -g: change new prefix in system bot (only admin bot)"
+				+ "\n   Example:"
+				+ "\n    {pn} # -g"
+				+ "\n\n   {pn} reset: change prefix in your box chat to default"
 		}
 	},
 
@@ -36,7 +36,7 @@ module.exports = {
 			confirmThisThread: "Vui lòng thả cảm xúc bất kỳ vào tin nhắn này để xác nhận thay đổi prefix trong nhóm chat của bạn",
 			successGlobal: "Đã thay đổi prefix hệ thống bot thành: %1",
 			successThisThread: "Đã thay đổi prefix trong nhóm chat của bạn thành: %1",
-			myPrefix: "🌐 Prefix của hệ thống: %1\fix của nhóm bạn: %2"
+			myPrefix: "🌐 Prefix của hệ thống: %1\n🛸 Prefix của nhóm bạn: %2"
 		},
 		en: {
 			reset: "Your prefix has been reset to default: %1",
@@ -44,8 +44,8 @@ module.exports = {
 			confirmGlobal: "Please react to this message to confirm change prefix of system bot",
 			confirmThisThread: "Please react to this message to confirm change prefix in your box chat",
 			successGlobal: "Changed prefix of system bot to: %1",
-			successThisThread: "Changed prefix in your box chat to: %1",
-			myPrefix: "🍀𝐏𝐑𝐄𝐅𝐈𝐗🫁𝐒𝐎𝐍𝐈𝐂🍀: 🫀%1🫀\n━━━━━━━━━━━━━━━━\n🎶𝙎𝙊𝙉𝙄𝘾☘👻𝙎𝙔𝙎𝙏𝙀𝐌🎶: 🩸%2🩸\n━━━━━━━━━━━━━━━━\n🏁☘️𝑀𝑌 𝐶𝑅𝐸𝐴𝑇𝑂𝑅☘️🏁\n━━━━━━━━━━━━━━━━\n🥷ʬɸʬ Sønïč❤️‍🔥Shïsûį ʬɸʬ🥷\n━━━━━━━━━━━━━━━━\n🦠𝗧𝗮𝗽𝗲 #𝗵𝗲𝗹𝗽 𝗽𝗼𝘂𝗿 𝗮𝘃𝗼𝗶𝗿 𝗹𝗮 𝗹𝗶𝘀𝘁𝗲 𝗱𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀🦠"
+			successThisThread: "Changed prefix in your box chat to: 𝐦𝐲 𝐩𝐫𝐞𝐟𝐢𝐱 𝐢𝐧 𝐭𝐡𝐞 𝐜𝐡𝐚𝐭 𝐛𝐨𝐱 %1",
+			myPrefix: "\n\n🌐 𝗯𝗼𝘁 𝗽𝗿𝗲𝗳𝗶𝘅 𝘀𝘆𝘀𝘁𝗲̀𝗺: %1 \n🛸 𝘆𝗼𝘂𝗿 𝗯𝗼𝘅 𝗰𝗵𝗮𝘁 𝗽𝗿𝗲𝗳𝗶𝘅: %2 \n\n\n\n\n\n "
 		}
 	},
 
@@ -57,15 +57,7 @@ module.exports = {
 			await threadsData.set(event.threadID, null, "data.prefix");
 			return message.reply(getLang("reset", global.GoatBot.config.prefix));
 		}
-  const helpListImages = [
-        "https://i.ibb.co/HgN9N8H/image.jpg",
-        "https://i.ibb.co/BVqHC54/image.jpg",
-        "https://i.ibb.co/54hpf9s/image.jpg",
-        "https://i.ibb.co/8xjnwfk/image.jpg",
-        // Add more image links as needed
-      ];
 
-      const helpListImage = helpListImages[Math.floor(Math.random() * helpListImages.length)];
 		const newPrefix = args[0];
 		const formSet = {
 			commandName,
